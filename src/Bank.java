@@ -14,7 +14,7 @@ class Account{
     //creating a method to deposit the balance of the account
     void deposit(int amount){                      //amount in the parameter
         if (amount != 0) {                              //if it is not zero
-            balance+=amount;                            //then increment the balance
+            balance=balance +amount;                            //then increment the balance
             prevTransBalance=amount;                   //and store amount in the previous value
 
         }
@@ -22,8 +22,8 @@ class Account{
 
     //creating a method to withdraw the money
     void withdrawMoney(int amount){
-        if(amount>0){
-            amount=balance-amount;                  //so the amount left will be total balance minus the amount demanded
+        if(amount!=0){
+            balance-=amount;                  //so the amount left will be total balance minus the amount demanded
             prevTransBalance = -amount;            // so that i can see my previous transaction as withdrawn
         }
     }
