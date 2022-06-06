@@ -22,7 +22,7 @@ class Account{
 
     //creating a method to withdraw the money
     void withdrawMoney(int amount){
-        if(amount!=0){
+        if(amount>0){
             amount=balance-amount;                  //so the amount left will be total balance minus the amount demanded
             prevTransBalance = -amount;            // so that i can see my previous transaction as withdrawn
         }
@@ -100,7 +100,8 @@ class Account{
 
 public class Bank {
     public static void main(String[] args) {
-
+Account acc = new Account("Kunal", "123");
+acc.mainMenu();
 
     }
 }
