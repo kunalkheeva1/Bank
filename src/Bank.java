@@ -27,7 +27,6 @@ class Account{
             prevTransBalance = -amount;            // so that i can see my previous transaction as withdrawn
         }
     }
-
     //creating a method to check the previous transcation
     void preBalance(){
         if(prevTransBalance<0){
