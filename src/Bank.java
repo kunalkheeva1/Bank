@@ -16,7 +16,18 @@ class Account{
     void withdrawMoney(int amount){
         if(amount!=0){
             amount=balance-amount;                  //so the amount left will be total balance minus the amount demanded
-            prevTransBalance = Math.abs(amount);    // and my previous value will store only the absolute value.
+            prevTransBalance = -amount;            // so that i can see my previous transaction as withdrawn
+        }
+    }
+
+    //creating a method to check the previous transcation
+    void preBalance(){
+        if(prevTransBalance<0){
+            System.out.println("Amount Debited: "+ Math.abs(prevTransBalance));
+        }else if(prevTransBalance>0){
+            System.out.println("Amount credited: "+ prevTransBalance);
+        }else{
+            System.out.println("No transaction so far in the records");
         }
     }
 }
